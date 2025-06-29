@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر فورت - متجر الحسابات</title>
+    <link rel="stylesheet" href="shop-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Language Toggle -->
+    <div class="language-toggle">
+        <button class="lang-btn active" data-lang="ar">العربية</button>
+        <button class="lang-btn" data-lang="en">English</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-gamepad"></i>
+                <span class="logo-text" data-ar="متجر فورت" data-en="FortStore">متجر فورت</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+                <li><a href="shop.html" class="nav-link active" data-ar="المتجر" data-en="Shop">المتجر</a></li>
+                <li><a href="#categories" class="nav-link" data-ar="الفئات" data-en="Categories">الفئات</a></li>
+                <li><a href="#contact" class="nav-link" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-secondary">تسجيل الدخول</a>
+                <a href="signup.html" class="btn btn-primary">إنشاء حساب</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Shop Header -->
+    <header class="shop-header">
+        <div class="container">
+            <h1 class="shop-title" data-ar="متجر الحسابات" data-en="Account Shop">متجر الحسابات</h1>
+            <p class="shop-subtitle" data-ar="اكتشف أفضل الحسابات النادرة والمميزة للشراء والإيجار" data-en="Discover the best rare and premium accounts for purchase and rental">اكتشف أفضل الحسابات النادرة والمميزة للشراء والإيجار</p>
+        </div>
+    </header>
+
+    <!-- Filters and Search -->
+    <section class="shop-filters">
+        <div class="container">
+            <div class="filters-container">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="البحث عن الحسابات..." data-en-placeholder="Search accounts...">
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all" data-ar="الكل" data-en="All">الكل</button>
+                    <button class="filter-btn" data-filter="purchase" data-ar="للشراء" data-en="Purchase">للشراء</button>
+                    <button class="filter-btn" data-filter="rental" data-ar="للإيجار" data-en="Rental">للإيجار</button>
+                    <button class="filter-btn" data-filter="og" data-ar="سكنات OG" data-en="OG Skins">سكنات OG</button>
+                    <button class="filter-btn" data-filter="rare" data-ar="نادرة" data-en="Rare">نادرة</button>
+                    <button class="filter-btn" data-filter="high-level" data-ar="مستوى عالي" data-en="High Level">مستوى عالي</button>
+                </div>
+                <div class="sort-options">
+                    <select class="sort-select">
+                        <option value="newest" data-ar="الأحدث" data-en="Newest">الأحدث</option>
+                        <option value="price-low" data-ar="السعر: منخفض إلى عالي" data-en="Price: Low to High">السعر: منخفض إلى عالي</option>
+                        <option value="price-high" data-ar="السعر: عالي إلى منخفض" data-en="Price: High to Low">السعر: عالي إلى منخفض</option>
+                        <option value="level" data-ar="المستوى" data-en="Level">المستوى</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Grid -->
+    <section class="shop-grid">
+        <div class="container">
+            <div class="accounts-grid">
+                <!-- Account Card 1 - Rental -->
+                <div class="account-card" data-category="rental og rare">
+                    <div class="card-image">
+                        <img src="images/Fortnite-skin-Galaxy.jpg" alt="Royal Party">
+                        <div class="card-badge rental">للإيجار</div>
+                        <div class="card-badge og">OG</div>
+                        <div class="card-badge rare">نادر</div>
+                        <div class="card-overlay">
+                            <button class="quick-view-btn" data-ar="عرض سريع" data-en="Quick View">عرض سريع</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title" data-ar="حساب اسطوري للحفل الملكي" data-en="Royal Party Legendary Account">حساب اسطوري للحفل الملكي</h3>
+                        <div class="card-stats">
+                            <span class="stat" data-ar="السكنات: 300+" data-en="Skins: 300+">السكنات: 300+</span>
+                            <span class="stat" data-ar="الرقصات: 80+" data-en="Dances: 80+">الرقصات: 80+</span>
+                            <span class="stat" data-ar="البيكاكسات: 40+" data-en="Pickaxes: 40+">البيكاكسات: 40+</span>
+                            <span class="stat" data-ar="تاريخ الإنشاء: 2018" data-en="Created: 2018">تاريخ الإنشاء: 2018</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="price" data-ar="50 ريال/ساعة" data-en="50 SAR/Hour">50 ريال/ساعة</span>
+                            <span class="rental-note" data-ar="للإيجار فقط" data-en="Rental Only">للإيجار فقط</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary buy-btn" data-ar="احجز الآن" data-en="Book Now">احجز الآن</button>
+                            <button class="btn btn-outline details-btn" data-ar="التفاصيل" data-en="Details">التفاصيل</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Account Card 2 - Purchase -->
+                <div class="account-card" data-category="purchase rare high-level">
+                    <div class="card-image">
+                        <img src="images/what-are-the-rarest-fortnite-skins-in-2023-23030903-1200x675.webp" alt="Galaxy">
+                        <div class="card-badge purchase">للشراء</div>
+                        <div class="card-badge rare">نادر</div>
+                        <div class="card-badge high-level">مستوى عالي</div>
+                        <div class="card-overlay">
+                            <button class="quick-view-btn" data-ar="عرض سريع" data-en="Quick View">عرض سريع</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title" data-ar="سكنة المجرة الأصلي" data-en="Original Galaxy Skin">سكنة المجرة الأصلي</h3>
+                        <div class="card-stats">
+                            <span class="stat" data-ar="السكنات: 200+" data-en="Skins: 200+">السكنات: 200+</span>
+                            <span class="stat" data-ar="الرقصات: 80+" data-en="Dances: 80+">الرقصات: 80+</span>
+                            <span class="stat" data-ar="البيكاكسات: 40+" data-en="Pickaxes: 40+">البيكاكسات: 40+</span>
+                            <span class="stat" data-ar="تاريخ الإنشاء: 2018" data-en="Created: 2018">تاريخ الإنشاء: 2018</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="price" data-ar="3,000 ريال" data-en="3,000 SAR">3,000 ريال</span>
+                            <span class="original-price" data-ar="3,500 ريال" data-en="3,500 SAR">3,500 ريال</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary buy-btn" data-ar="اشتري الآن" data-en="Buy Now">اشتري الآن</button>
+                            <button class="btn btn-outline details-btn" data-ar="التفاصيل" data-en="Details">التفاصيل</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Account Card 3 - Rental -->
+                <div class="account-card" data-category="rental og">
+                    <div class="card-image">
+                        <img src="images/98bfa4af-44ae-433e-9115-ed809cd3b6de-1000x1000-Q9NHyvPpNWucWo1Hyu3CQBg4mcQaFilt4zJVOBIB.webp" alt="Black Knight">
+                        <div class="card-badge rental">للإيجار</div>
+                        <div class="card-badge og">OG</div>
+                        <div class="card-overlay">
+                            <button class="quick-view-btn" data-ar="عرض سريع" data-en="Quick View">عرض سريع</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title" data-ar="فارس أسود OG" data-en="Black Knight OG">فارس أسود OG</h3>
+                        <div class="card-stats">
+                            <span class="stat" data-ar="السكنات: 150+" data-en="Skins: 150+">السكنات: 150+</span>
+                            <span class="stat" data-ar="الرقصات: 50+" data-en="Dances: 50+">الرقصات: 50+</span>
+                            <span class="stat" data-ar="البيكاكسات: 20+" data-en="Pickaxes: 20+">البيكاكسات: 20+</span>
+                            <span class="stat" data-ar="تاريخ الإنشاء: 2018" data-en="Created: 2018">تاريخ الإنشاء: 2018</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="price" data-ar="30 ريال/ساعة" data-en="30 SAR/Hour">30 ريال/ساعة</span>
+                            <span class="rental-note" data-ar="للإيجار فقط" data-en="Rental Only">للإيجار فقط</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary buy-btn" data-ar="احجز الآن" data-en="Book Now">احجز الآن</button>
+                            <button class="btn btn-outline details-btn" data-ar="التفاصيل" data-en="Details">التفاصيل</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Account Card 4 - Purchase -->
+                <div class="account-card" data-category="purchase high-level">
+                    <div class="card-image">
+                        <img src="images/icon.webp" alt="Max Level">
+                        <div class="card-badge purchase">للشراء</div>
+                        <div class="card-badge high-level">مستوى عالي</div>
+                        <div class="card-overlay">
+                            <button class="quick-view-btn" data-ar="عرض سريع" data-en="Quick View">عرض سريع</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title" data-ar="حساب المستوى الأقصى" data-en="Max Level Account">حساب المستوى الأقصى</h3>
+                        <div class="card-stats">
+                            <span class="stat" data-ar="السكنات: 500+" data-en="Skins: 500+">السكنات: 500+</span>
+                            <span class="stat" data-ar="الرقصات: 100+" data-en="Dances: 100+">الرقصات: 100+</span>
+                            <span class="stat" data-ar="البيكاكسات: 50+" data-en="Pickaxes: 50+">البيكاكسات: 50+</span>
+                            <span class="stat" data-ar="تاريخ الإنشاء: 2018" data-en="Created: 2018">تاريخ الإنشاء: 2018</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="price" data-ar="5,000 ريال" data-en="5,000 SAR">5,000 ريال</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary buy-btn" data-ar="اشتري الآن" data-en="Buy Now">اشتري الآن</button>
+                            <button class="btn btn-outline details-btn" data-ar="التفاصيل" data-en="Details">التفاصيل</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Account Card 5 - Rental -->
+                <div class="account-card" data-category="rental rare">
+                    <div class="card-image">
+                        <img src="images/icon (1).webp" alt="Rare Collection">
+                        <div class="card-badge rental">للإيجار</div>
+                        <div class="card-badge rare">نادر</div>
+                        <div class="card-overlay">
+                            <button class="quick-view-btn" data-ar="عرض سريع" data-en="Quick View">عرض سريع</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title" data-ar="مجموعة السكنات النادرة" data-en="Rare Skins Collection">مجموعة السكنات النادرة</h3>
+                        <div class="card-stats">
+                            <span class="stat" data-ar="السكنات: 250+" data-en="Skins: 250+">السكنات: 250+</span>
+                            <span class="stat" data-ar="الرقصات: 70+" data-en="Dances: 70+">الرقصات: 70+</span>
+                            <span class="stat" data-ar="البيكاكسات: 30+" data-en="Pickaxes: 30+">البيكاكسات: 30+</span>
+                            <span class="stat" data-ar="تاريخ الإنشاء: 2018" data-en="Created: 2018">تاريخ الإنشاء: 2018</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="price" data-ar="40 ريال/ساعة" data-en="40 SAR/Hour">40 ريال/ساعة</span>
+                            <span class="rental-note" data-ar="للإيجار فقط" data-en="Rental Only">للإيجار فقط</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary buy-btn" data-ar="احجز الآن" data-en="Book Now">احجز الآن</button>
+                            <button class="btn btn-outline details-btn" data-ar="التفاصيل" data-en="Details">التفاصيل</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Account Card 6 - Purchase -->
+                <div class="account-card" data-category="purchase og rare">
+                    <div class="card-image">
+                        <img src="images/0_Untitled-design-5.webp" alt="Golden OG">
+                        <div class="card-badge purchase">للشراء</div>
+                        <div class="card-badge og">OG</div>
+                        <div class="card-badge rare">نادر</div>
+                        <div class="card-overlay">
+                            <button class="quick-view-btn" data-ar="عرض سريع" data-en="Quick View">عرض سريع</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title" data-ar="الذهبي الأصلي" data-en="Original Golden">الذهبي الأصلي</h3>
+                        <div class="card-stats">
+                            <span class="stat" data-ar="السكنات: 160+" data-en="Skins: 160+">السكنات: 160+</span>
+                            <span class="stat" data-ar="الرقصات: 50+" data-en="Dances: 50+">الرقصات: 50+</span>
+                            <span class="stat" data-ar="البيكاكسات: 20+" data-en="Pickaxes: 20+">البيكاكسات: 20+</span>
+                            <span class="stat" data-ar="تاريخ الإنشاء: 2018" data-en="Created: 2018">تاريخ الإنشاء: 2018</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="price" data-ar="3,200 ريال" data-en="3,200 SAR">3,200 ريال</span>
+                            <span class="original-price" data-ar="3,800 ريال" data-en="3,800 SAR">3,800 ريال</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary buy-btn" data-ar="اشتري الآن" data-en="Buy Now">اشتري الآن</button>
+                            <button class="btn btn-outline details-btn" data-ar="التفاصيل" data-en="Details">التفاصيل</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Account Card 7 - Rental -->
+                <div class="account-card" data-category="rental high-level">
+                    <div class="card-image">
+                        <img src="images/Fortnite-skin-Galaxy.jpg" alt="Pro Account">
+                        <div class="card-badge rental">للإيجار</div>
+                        <div class="card-badge high-level">مستوى عالي</div>
+                        <div class="card-overlay">
+                            <button class="quick-view-btn" data-ar="عرض سريع" data-en="Quick View">عرض سريع</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title" data-ar="حساب محترف" data-en="Pro Account">حساب محترف</h3>
+                        <div class="card-stats">
+                            <span class="stat" data-ar="السكنات: 350+" data-en="Skins: 350+">السكنات: 350+</span>
+                            <span class="stat" data-ar="الرقصات: 100+" data-en="Dances: 100+">الرقصات: 100+</span>
+                            <span class="stat" data-ar="البيكاكسات: 50+" data-en="Pickaxes: 50+">البيكاكسات: 50+</span>
+                            <span class="stat" data-ar="تاريخ الإنشاء: 2018" data-en="Created: 2018">تاريخ الإنشاء: 2018</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="price" data-ar="60 ريال/ساعة" data-en="60 SAR/Hour">60 ريال/ساعة</span>
+                            <span class="rental-note" data-ar="للإيجار فقط" data-en="Rental Only">للإيجار فقط</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary buy-btn" data-ar="احجز الآن" data-en="Book Now">احجز الآن</button>
+                            <button class="btn btn-outline details-btn" data-ar="التفاصيل" data-en="Details">التفاصيل</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Account Card 8 - Purchase -->
+                <div class="account-card" data-category="purchase rare">
+                    <div class="card-image">
+                        <img src="images/what-are-the-rarest-fortnite-skins-in-2023-23030903-1200x675.webp" alt="Exclusive">
+                        <div class="card-badge purchase">للشراء</div>
+                        <div class="card-badge rare">نادر</div>
+                        <div class="card-overlay">
+                            <button class="quick-view-btn" data-ar="عرض سريع" data-en="Quick View">عرض سريع</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title" data-ar="حساب حصري" data-en="Exclusive Account">حساب حصري</h3>
+                        <div class="card-stats">
+                            <span class="stat" data-ar="السكنات: 200+" data-en="Skins: 200+">السكنات: 200+</span>
+                            <span class="stat" data-ar="الرقصات: 50+" data-en="Dances: 50+">الرقصات: 50+</span>
+                            <span class="stat" data-ar="البيكاكسات: 20+" data-en="Pickaxes: 20+">البيكاكسات: 20+</span>
+                            <span class="stat" data-ar="تاريخ الإنشاء: 2018" data-en="Created: 2018">تاريخ الإنشاء: 2018</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="price" data-ar="2,800 ريال" data-en="2,800 SAR">2,800 ريال</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary buy-btn" data-ar="اشتري الآن" data-en="Buy Now">اشتري الآن</button>
+                            <button class="btn btn-outline details-btn" data-ar="التفاصيل" data-en="Details">التفاصيل</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Load More Button -->
+    <section class="load-more">
+        <div class="container">
+            <button class="btn btn-secondary load-more-btn" data-ar="تحميل المزيد" data-en="Load More">تحميل المزيد</button>
+        </div>
+    </section>
+
+    <!-- Quick View Modal -->
+    <div class="modal" id="quickViewModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 data-ar="تفاصيل الحساب" data-en="Account Details">تفاصيل الحساب</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="" alt="Account Image" id="modalImage">
+                </div>
+                <div class="modal-info">
+                    <h4 id="modalTitle"></h4>
+                    <div class="modal-stats">
+                        <div class="stat-item">
+                            <span class="label" data-ar="عدد السكنات:" data-en="Skins:">عدد السكنات:</span>
+                            <span class="value" id="modalSkins"></span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="label" data-ar="عدد الرقصات:" data-en="Dances:">عدد الرقصات:</span>
+                            <span class="value" id="modalDances"></span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="label" data-ar="عدد البيكاكسات:" data-en="Pickaxes:">عدد البيكاكسات:</span>
+                            <span class="value" id="modalPickaxes"></span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="label" data-ar="تاريخ الإنشاء:" data-en="Created:">تاريخ الإنشاء:</span>
+                            <span class="value" id="modalCreated"></span>
+                        </div>
+                    </div>
+                    <div class="modal-features">
+                        <h5 data-ar="المميزات:" data-en="Features:">المميزات:</h5>
+                        <ul id="modalFeatures"></ul>
+                    </div>
+                    <div class="modal-price">
+                        <span class="price" id="modalPrice"></span>
+                        <span class="original-price" id="modalOriginalPrice"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" data-ar="احجز الآن" data-en="Book Now">احجز الآن</button>
+                <button class="btn btn-outline" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rental Terms Modal -->
+    <div class="modal" id="rentalTermsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 data-ar="شروط الإيجار" data-en="Rental Terms">شروط الإيجار</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="rental-terms">
+                    <div class="term-section">
+                        <h4>✨ طريقة الدخول على الحساب:</h4>
+                        <ul>
+                            <li>ايجار الحساب يتم عن طريق جهاز سوني 4 او سوني 5 فقط وغير متاح للأجهزة الأخرى حاليًا</li>
+                            <li>يتم تسجيل الدخول عن طريق الباركود وبنتواصل معك عبر الواتساب حتى ندخلك الحساب قبل بدء وقت الايجار بـ 10 دقائق</li>
+                        </ul>
+                    </div>
+                    <div class="term-section">
+                        <h4>📜 شروط التأجير:</h4>
+                        <ul>
+                            <li>يقر العميل بعدم تغيير معلومات الحساب أو المحاولة بتغييره.</li>
+                            <li>يقر العميل بعدم السب والشتم بتاتًا بالمحادثة الكتابية او بالمحادثة الصوتية سواء من حساب السوني او من داخل اللعبة.</li>
+                            <li>في حال مخالفة الشروط سيتم إلغاء الحجز حتى لو لم تنتهي مدة الايجار.</li>
+                            <li>بالوقت الحالي نستقبل التأجير للعملاء من داخل السعودية فقط، حتى نحمي الحساب من الباند لا سمح الله.</li>
+                        </ul>
+                    </div>
+                    <div class="term-section">
+                        <h4>⭕ الغاء الحجز:</h4>
+                        <ul>
+                            <li>يحق للعميل إلغاء الحجز واسترجاع أمواله <strong>قبل 5 ساعات</strong> من بدء وقت الإيجار</li>
+                        </ul>
+                    </div>
+                    <div class="term-section">
+                        <h4>💥 مميزات متجر فورت:</h4>
+                        <ul>
+                            <li>⚡ تواصل سرريع وخدمة رهيبة</li>
+                            <li>⭐ نظام تأجير منظم وفريد</li>
+                            <li>💸 بأرخص الأسعار وعروض مستمرة</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" data-ar="أوافق على الشروط" data-en="I Agree to Terms">أوافق على الشروط</button>
+                <button class="btn btn-outline" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="shop-script.js"></script>
+</body>
+</html> 

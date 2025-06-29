@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة إضافة حساب - متجر فورت</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body.panel-bg {background: #18192b; min-height: 100vh; display: flex; align-items: center; justify-content: center;}
+        .panel-container {background: #23244a; border-radius: 18px; box-shadow: 0 0 32px #7c3aed44; padding: 2.5rem 2rem; max-width: 500px; width: 100%;}
+        .panel-title {color: #fff; font-family: 'Cairo', sans-serif; font-size: 2rem; margin-bottom: 1.5rem; text-align: center;}
+        .panel-form {display: flex; flex-direction: column; gap: 1.2rem;}
+        .panel-form label {color: #bdbdf7; font-size: 1rem; margin-bottom: 0.3rem;}
+        .panel-form input, .panel-form select, .panel-form textarea {background: #18192b; border: 1px solid #7c3aed; border-radius: 8px; color: #fff; padding: 0.7rem 1rem; font-size: 1rem;}
+        .panel-form textarea {resize: vertical; min-height: 60px;}
+        .panel-form .input-group {position: relative;}
+        .panel-form .panel-btn {background: linear-gradient(90deg, #7c3aed, #38bdf8); color: #fff; border: none; border-radius: 8px; padding: 0.8rem; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: box-shadow 0.2s; box-shadow: 0 0 12px #7c3aed55;}
+        .panel-form .panel-btn:hover {box-shadow: 0 0 24px #7c3aed99;}
+        .panel-form .image-upload {display: flex; align-items: center; gap: 1rem;}
+        .panel-form .image-upload input[type='file'] {display: none;}
+        .panel-form .image-upload label {background: #7c3aed; color: #fff; padding: 0.5rem 1rem; border-radius: 8px; cursor: pointer;}
+        .panel-form .image-preview {width: 60px; height: 60px; border-radius: 8px; object-fit: cover; border: 2px solid #38bdf8;}
+        @media (max-width: 600px) {.panel-container {padding: 1.5rem 0.5rem;}}
+    </style>
+</head>
+<body class="panel-bg">
+    <div class="panel-container">
+        <div class="panel-title" data-ar="إضافة حساب جديد" data-en="Add New Account">إضافة حساب جديد</div>
+        <form class="panel-form" autocomplete="off">
+            <label for="account-name" data-ar="اسم الحساب" data-en="Account Name">اسم الحساب</label>
+            <input type="text" id="account-name" required>
+            <label for="skins" data-ar="عدد السكنات" data-en="Number of Skins">عدد السكنات</label>
+            <input type="number" id="skins" min="0" required>
+            <label for="dances" data-ar="عدد الرقصات" data-en="Number of Dances">عدد الرقصات</label>
+            <input type="number" id="dances" min="0" required>
+            <label for="pickaxes" data-ar="عدد البيكاكسات" data-en="Number of Pickaxes">عدد البيكاكسات</label>
+            <input type="number" id="pickaxes" min="0" required>
+            <label for="created" data-ar="سنة الإنشاء" data-en="Creation Year">سنة الإنشاء</label>
+            <input type="number" id="created" min="2017" max="2024" required>
+            <label for="price" data-ar="السعر (ريال)" data-en="Price (SAR)">السعر (ريال)</label>
+            <input type="number" id="price" min="0" required>
+            <label for="original-price" data-ar="السعر الأصلي (اختياري)" data-en="Original Price (optional)">السعر الأصلي (اختياري)</label>
+            <input type="number" id="original-price" min="0">
+            <label for="type" data-ar="نوع الحساب" data-en="Account Type">نوع الحساب</label>
+            <select id="type" required>
+                <option value="purchase" data-ar="للشراء" data-en="Purchase">للشراء</option>
+                <option value="rental" data-ar="للإيجار" data-en="Rental">للإيجار</option>
+            </select>
+            <div class="image-upload">
+                <label for="image">تحميل صورة</label>
+                <input type="file" id="image" accept="image/*">
+                <img src="" alt="Preview" class="image-preview" style="display:none;">
+            </div>
+            <label for="features" data-ar="المميزات" data-en="Features">المميزات</label>
+            <textarea id="features" placeholder="مثال: حساب آمن وموثق، دعم 24/7، ..."></textarea>
+            <button type="submit" class="panel-btn" data-ar="إضافة الحساب" data-en="Add Account">إضافة الحساب</button>
+        </form>
+    </div>
+    <script>
+    // Simple admin check (replace with real auth in production)
+    if (localStorage.getItem('isAdmin') !== 'true') {
+        window.location.href = 'index.html';
+    }
+
+    // Image preview
+    document.getElementById('image').onchange = function(e) {
+        const file = e.target.files[0];
+        const preview = document.querySelector('.image-preview');
+        if (file) {
+            preview.src = URL.createObjectURL(file);
+            preview.style.display = 'block';
+        } else {
+            preview.src = '';
+            preview.style.display = 'none';
+        }
+    };
+    </script>
+</body>
+</html> 

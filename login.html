@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول - فورت شوب</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body.login-bg {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #7c3aed 0%, #6b46c1 100%);
+        }
+        .split-container {
+            display: flex;
+            width: 900px;
+            max-width: 98vw;
+            min-height: 600px;
+            border-radius: 24px;
+            box-shadow: 0 8px 40px 0 #6b46c155, 0 1.5px 8px 0 #0002;
+            overflow: hidden;
+            background: none;
+        }
+        .split-left {
+            flex: 1.1;
+            position: relative;
+            background: url('images/Fortnite-skin-Galaxy.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 0;
+        }
+        .split-left-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(24, 25, 43, 0.7);
+            z-index: 1;
+        }
+        .split-left-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            min-height: 400px;
+            padding: 2.5rem 1.5rem;
+        }
+        .split-left-content h2 {
+            font-size: 2.3rem;
+            margin-bottom: 1.5rem;
+            color: #fff;
+            text-align: center;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .split-left-content p {
+            color: #e0e0ff;
+            font-size: 1.25rem;
+            margin-bottom: 0;
+            text-align: center;
+        }
+        .split-right {
+            flex: 1;
+            background: #23244a;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-width: 0;
+            padding: 2.5rem 1.5rem;
+        }
+        .login-card {
+            background: none;
+            border-radius: 0;
+            box-shadow: none;
+            padding: 0;
+            max-width: 410px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .login-logo {
+            font-size: 2.3rem;
+            color: #7c3aed;
+            margin-bottom: 1.2rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            letter-spacing: 1px;
+        }
+        .login-form-title {
+            font-size: 1.7rem;
+            font-weight: bold;
+            margin-bottom: 0.7rem;
+            color: #fff;
+            text-align: center;
+        }
+        .login-form-desc {
+            color: #bdbdf7;
+            margin-bottom: 2.2rem;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+        .google-btn {
+            width: 100%;
+            background: #fff;
+            color: #23244a;
+            border: none;
+            border-radius: 12px;
+            padding: 1rem 0;
+            font-size: 1.15rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.7rem;
+            box-shadow: 0 0 12px #7c3aed22;
+            transition: box-shadow 0.2s, background 0.2s;
+        }
+        .google-btn:hover {
+            box-shadow: 0 0 24px #7c3aed55;
+            background: #f3f3ff;
+        }
+        .or-divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #bdbdf7;
+            margin: 1.5rem 0 1.5rem 0;
+            width: 100%;
+            font-size: 1.1rem;
+        }
+        .or-divider span {
+            flex: 1;
+            height: 1px;
+            background: #393a5a;
+            margin: 0 0.5rem;
+        }
+        .login-form {
+            width: 100%;
+            max-width: 340px;
+            display: flex;
+            flex-direction: column;
+            gap: 0.7rem;
+        }
+        .login-form label {
+            color: #bdbdf7;
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+        }
+        .login-form input {
+            background: #23244a;
+            border: 1.5px solid #7c3aed;
+            border-radius: 10px;
+            color: #fff;
+            padding: 0.9rem 1rem;
+            font-size: 1.05rem;
+            margin-bottom: 0.2rem;
+            transition: border 0.2s;
+        }
+        .login-form input:focus {
+            border: 1.5px solid #38bdf8;
+            outline: none;
+        }
+        .login-form .forgot-link {
+            color: #38bdf8;
+            font-size: 1rem;
+            text-align: left;
+            margin-bottom: 1.2rem;
+            display: block;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .login-form .forgot-link:hover {
+            color: #7c3aed;
+        }
+        .login-form .auth-btn {
+            background: linear-gradient(90deg, #7c3aed, #38bdf8);
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            padding: 1rem 0;
+            font-size: 1.15rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: box-shadow 0.2s, background 0.2s;
+            box-shadow: 0 0 12px #7c3aed55;
+            width: 100%;
+            margin-top: 0.5rem;
+        }
+        .login-form .auth-btn:hover {
+            box-shadow: 0 0 24px #7c3aed99;
+            background: linear-gradient(90deg, #38bdf8, #7c3aed);
+        }
+        .login-form .switch-link {
+            color: #bdbdf7;
+            font-size: 1.08rem;
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+        .login-form .switch-link a {
+            color: #38bdf8;
+            text-decoration: underline;
+            transition: color 0.2s;
+        }
+        .login-form .switch-link a:hover {
+            color: #7c3aed;
+        }
+        @media (max-width: 900px) {
+            .split-container { flex-direction: column; min-height: 0; width: 100vw; border-radius: 0; }
+            .split-left, .split-right { flex: unset; width: 100%; min-width: 0; min-height: 0; border-radius: 0; }
+            .split-left-content { max-width: 95vw; }
+            .login-form { max-width: 95vw; }
+        }
+        @media (max-width: 600px) {
+            .split-container { width: 100vw; border-radius: 0; }
+            .split-left, .split-right { padding: 1.5rem 0.5rem; }
+        }
+    </style>
+</head>
+<body class="login-bg">
+    <div class="split-container">
+        <div class="split-left">
+            <div class="split-left-overlay"></div>
+            <div class="split-left-content">
+                <h2>استعد للانطلاق في مغامرة جديدة!</h2>
+                <p>اكتشف أفضل الحسابات النادرة والمميزة وابدأ رحلتك في عالم فورتنايت مع فورت شوب.</p>
+            </div>
+        </div>
+        <div class="split-right">
+            <div class="login-card">
+                <div class="login-logo"><i class="fas fa-moon"></i> فورت شوب</div>
+                <div class="login-form-title">تسجيل الدخول</div>
+                <div class="login-form-desc">سجّل دخولك لتحصل على أفضل تجربة تسوق لحسابات فورتنايت</div>
+                <button class="google-btn" onclick="alert('Google login integration goes here!')"><i class="fab fa-google"></i>تسجيل الدخول عبر Google</button>
+                <div class="or-divider"><span></span>أو<span></span></div>
+                <form class="login-form" autocomplete="off">
+                    <label for="login-email">البريد الإلكتروني أو اسم المستخدم</label>
+                    <input type="text" id="login-email" placeholder="example@email.com" required>
+                    <label for="login-password">كلمة المرور</label>
+                    <input type="password" id="login-password" placeholder="••••••••" required>
+                    <a href="#" class="forgot-link">نسيت كلمة المرور؟</a>
+                    <button type="submit" class="auth-btn">دخول</button>
+                    <div class="switch-link">ليس لديك حساب؟ <a href="signup.html">سجل الآن</a></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
